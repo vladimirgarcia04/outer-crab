@@ -377,6 +377,175 @@ section {
     }
 }
 
+/* Templates Section */
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.template-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+    transform: translateY(-10px);
+}
+
+.template-image {
+    height: 200px;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.mockup-header {
+    height: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: #ff5f56;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #27c93f;
+}
+
+.mockup-content {
+    padding: 15px;
+    height: calc(100% - 25px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CSS Mockups for Templates */
+/* E-commerce Mockup */
+.mockup-content.ecommerce .m-hero {
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(59, 130, 246, 0.3));
+}
+
+.mockup-content.ecommerce .m-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    flex: 1;
+}
+
+.mockup-content.ecommerce .m-grid div {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+/* Portfolio Mockup */
+.mockup-content.portfolio {
+    flex-direction: row;
+}
+
+.mockup-content.portfolio .m-sidebar {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.mockup-content.portfolio .m-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mockup-content.portfolio .m-card {
+    flex: 1;
+    background: rgba(45, 212, 191, 0.2);
+    border-radius: 8px;
+}
+
+/* Dashboard Mockup */
+.mockup-content.dashboard .m-header {
+    height: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.mockup-content.dashboard .m-body {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.mockup-content.dashboard .m-chart {
+    flex: 2;
+    background: rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+}
+
+.mockup-content.dashboard .m-stats {
+    flex: 1;
+    background: rgba(192, 132, 252, 0.2);
+    border-radius: 8px;
+}
+
+.template-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.template-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.template-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.preview-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--accent-1);
+    color: var(--accent-1);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.preview-btn:hover {
+    background: var(--accent-1);
+    color: white;
+}
+
 .feature-card {
     padding: 2.5rem;
     text-align: center;
