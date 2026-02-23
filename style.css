@@ -308,11 +308,73 @@ section {
     color: var(--text-main);
 }
 
-/* Features Section */
+/* Feature Section */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-1);
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.story-text strong {
+    color: var(--text-main);
+}
+
+.story-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+}
+
+.glowing-orb {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2) 40%, transparent 80%);
+    box-shadow:
+        0 0 40px var(--accent-1),
+        inset 0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 80px var(--accent-2);
+    animation: pulseOrb 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseOrb {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 30px var(--accent-1), inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 60px var(--accent-2);
+    }
+
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 60px var(--accent-1), inset 0 0 30px rgba(255, 255, 255, 0.6), 0 0 100px var(--accent-3);
+    }
 }
 
 .feature-card {
@@ -411,5 +473,9 @@ section {
 
     .nav-links {
         display: none;
+    }
+
+    .about-content {
+        flex-direction: column;
     }
 }
