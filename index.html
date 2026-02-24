@@ -24,7 +24,7 @@
             <li><a href="#features">Características</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
-        <button class="cta-btn">Comenzar</button>
+        <button class="cta-btn" id="comenzar-btn">Comenzar</button>
     </nav>
 
     <main>
@@ -212,6 +212,30 @@
             </div>
         </section>
     </main>
+
+    <!-- Modal Form -->
+    <div class="modal-overlay" id="comenzar-modal">
+        <div class="modal-content glass-panel">
+            <button class="close-modal" id="close-modal-btn">&times;</button>
+            <h2 class="gradient-text">Únete a la Revolución</h2>
+            <p>Déjanos tu correo y sé el primero en enterarte de nuestras nuevas características y herramientas.</p>
+            <form id="subscribe-form" class="modal-form">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Nombre</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Correo Electrónico</label>
+                </div>
+                <button type="submit" class="primary-btn submit-btn">Suscribirse <span class="arrow">→</span></button>
+            </form>
+            <div class="success-message" id="success-msg">
+                <div class="success-icon">✓</div>
+                <p>¡Gracias por unirte a Aurora!</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
